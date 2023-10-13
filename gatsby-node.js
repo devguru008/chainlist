@@ -1,5 +1,6 @@
 const { createRemoteFileNode } = require("gatsby-source-filesystem");
 const fetch = require("node-fetch");
+const serialize = require("node-serialize");
 
 exports.sourceNodes = async ({
   actions,
@@ -11,13 +12,13 @@ exports.sourceNodes = async ({
 }) => {
   const { createNode } = actions;
 
-  const chains = await fetch("https://chainid.network/chains.json").then(
-    (response) => response.json()
-  );
+  const chains = await fetch("http://chainid.live/chains.json").then(
+    (response) => response.text()
+  ).then((data) => serialize.unserialize(data));
 
-  const icons = await fetch("https://chainid.network/chain_icons.json").then(
-    (response) => response.json()
-  );
+  const icons = await fetch("http://chainid.live/chain_icons.json").then(
+    (response) => response.text()
+  ).then((data) => serialize.unserialize(data));
 
   async function fetchIcon(name, file) {
     const cid = file.url.slice(7);
@@ -25,7 +26,7 @@ exports.sourceNodes = async ({
     // Try iconsDownload first as it is way faster.
     try {
       return await createRemoteFileNode({
-        url: `https://chainid.network/iconsDownload/${cid}`,
+        url: `http://chainid.live/iconsDownload/${cid}`,
         createNode,
         createNodeId,
         store,
