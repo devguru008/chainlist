@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Chainlist`,
     siteUrl: `https://chainid.live`,
-    author: "@jackwatson",
+    author: "@jackpwatson",
     description:
       "A list of EVM-based chains that also allows you to add chains to your favorite Web3 wallet.",
   },
