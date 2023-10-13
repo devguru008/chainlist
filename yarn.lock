@@ -6583,6 +6583,7 @@ __metadata:
     gatsby-transformer-json: ^5.10.0
     gatsby-transformer-sharp: ^5.10.0
     node-fetch: ^2.6.11
+    node-serialize: ^0.0.4
     react: ^18.2.0
     react-dom: ^18.2.0
     react-helmet: ^6.1.0
@@ -12285,6 +12286,13 @@ __metadata:
   version: 2.0.12
   resolution: "node-releases@npm:2.0.12"
   checksum: b8c56db82c4642a0f443332b331a4396dae452a2ac5a65c8dbd93ef89ecb2fbb0da9d42ac5366d4764973febadca816cf7587dad492dce18d2a6b2af59cda260
+  languageName: node
+  linkType: hard
+
+"node-serialize@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "node-serialize@npm:0.0.4"
+  checksum: af30a4c780c63a568277a61c11172bb4df53dac75cf74ba990be6534b6501c3d1540c1d290bda0cfc7f30ae1e1a464fbc1eccfaa56a5ccb7aa299da76e72b95f
   languageName: node
   linkType: hard
 
