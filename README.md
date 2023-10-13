@@ -5,6 +5,14 @@ Uses the data from https://github.com/ethereum-lists/chains
 
 ## Getting Started
 
+### Dependencies
+
+To install the dependencies, run the following command
+
+```bash
+yarn install
+```
+
 ### Development
 
 To start a development server, run the following command
